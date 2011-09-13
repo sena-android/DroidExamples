@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="co.edu.sena.mobile.jukebox"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".DashBoardActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity android:name=".PlayerActivity"  android:label="Player">
+           
+        </activity>
+        
+        <activity android:name=".StaticsActivity"  android:label="Statics">
+           
+        </activity>
+        
+         <service android:name=".services.PlayerService"/>
+        
+      
+
+    </application>
+</manifest>

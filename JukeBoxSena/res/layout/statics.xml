@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+ >
+<ScrollView android:id="@+id/scrollView1" android:layout_height="wrap_content" android:layout_width="match_parent">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TableLayout android:layout_height="fill_parent" android:layout_width="fill_parent" android:stretchColumns="3">
+            <TableRow android:gravity="center_horizontal">
+                <TextView android:text="@string/first_day_of_week"></TextView>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton1" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_width="wrap_content"></ImageButton>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <TextView android:text="@string/second_day_of_week"></TextView>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton1" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_width="wrap_content"></ImageButton>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <TextView android:text="@string/third_day_of_week"></TextView>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton1" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_width="wrap_content"></ImageButton>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <TextView android:text="@string/fourth_day_of_week"></TextView>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton1" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_width="wrap_content"></ImageButton>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <TextView android:text="@string/fifth_day_of_week"></TextView>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton1" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_width="wrap_content"></ImageButton>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <TextView android:text="@string/sixth_day_of_week"></TextView>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton1" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_width="wrap_content"></ImageButton>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal">
+                <TextView android:text="@string/seventh_day_of_week"></TextView>
+            </TableRow>
+            <TableRow>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton1" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_width="wrap_content"></ImageButton>
+                <ImageButton android:src="@drawable/icon" android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_width="wrap_content"></ImageButton>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

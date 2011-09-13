@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent" 
+    >
+    
+
+    
+    <LinearLayout 
+    android:layout_width="fill_parent" 
+    android:id="@+id/linearLayout1" 
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    
+        <TextView android:id="@+id/tvContadorLista" 
+   		 android:textSize="15dp" 
+   		 android:text="@string/contadorLista"
+   		 android:textColor="@color/verde"   		 
+   		 android:layout_width="wrap_content" 
+   		 android:layout_height="wrap_content"
+   		 
+   		 >
+   		 </TextView>
+    
+    </LinearLayout>
+    
+    <TextView android:textSize="15dp" 
+   		 android:textColor="@color/verde"   		 
+   		 android:layout_width="fill_parent" 
+   		 android:layout_height="wrap_content" 
+   		 android:text="@string/nombrecancion" android:id="@+id/tvSongName" android:ellipsize="marquee">
+   	</TextView>
+
+
+	<ImageView android:src="@drawable/u2" 
+	android:layout_width="match_parent" android:layout_height="370dp" android:id="@+id/ivImageAlbum"></ImageView>
+	<RelativeLayout 
+	android:id="@+id/relativeLayout1" 
+	android:layout_width="match_parent" android:layout_height="wrap_content">
+		
+		<TextView 
+		android:id="@+id/textView1" 
+		android:layout_width="wrap_content" 
+		android:text="TextView" 
+		android:layout_height="wrap_content" 
+		android:layout_centerVertical="true" 
+		android:layout_alignParentRight="true" 
+		android:layout_marginRight="22dp">
+		</TextView>
+		<ImageButton android:layout_height="wrap_content" 
+			android:id="@+id/imageButton1" 
+			android:src="@android:drawable/ic_media_previous" 
+			android:layout_width="wrap_content" 
+			android:layout_alignParentTop="true" 
+			android:layout_alignParentLeft="true">
+		</ImageButton>
+		<ImageButton android:layout_height="wrap_content" 
+			android:id="@+id/btnPlay" 
+			android:src="@android:drawable/ic_media_play" 
+			android:layout_width="wrap_content" 
+			android:layout_alignParentTop="true" 
+			android:layout_toRightOf="@+id/imageButton1">
+		</ImageButton>
+		<ImageButton android:layout_height="wrap_content"
+			 android:id="@+id/imageButton3" 
+			 android:src="@android:drawable/ic_media_next" 
+			 android:layout_width="wrap_content" 
+			 android:layout_alignParentTop="true" 
+			 android:layout_toRightOf="@+id/btnPlay">
+		 </ImageButton>
+		
+	</RelativeLayout>
+
+    
+       
+    
+  
+ 
+    
+</LinearLayout>

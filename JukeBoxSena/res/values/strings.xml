@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+    <string name="app_name">JukeBoxSena</string>
+    <string name="contadorLista"> 8/12 </string>   
+     <string name="nombrecancion"> U2- Beautiful Day </string>  
+     
+    <string name="first_day_of_week">Lunes</string>
+    <string name="second_day_of_week">Martes</string>
+    <string name="third_day_of_week">Miercoles</string>
+    <string name="fourth_day_of_week">Jueves</string>
+    <string name="fifth_day_of_week">Viernes</string>
+    <string name="sixth_day_of_week">Sabado</string>
+    <string name="seventh_day_of_week">Domingo</string>
+</resources>

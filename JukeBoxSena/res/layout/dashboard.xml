@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    >
+      
+  
+<LinearLayout 
+     android:id="@+id/dash" 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:gravity="center|center_vertical"  
+    android:layout_weight="3" 
+    >
+    
+   <LinearLayout 
+    android:orientation="vertical"
+    android:id="@+id/west" 
+    android:paddingLeft="10dip"
+	android:paddingRight="10dip"
+	android:paddingTop="0dip"
+	android:paddingBottom="0dip" 
+	android:layout_height="fill_parent" 
+	android:layout_width="wrap_content" android:gravity="center">
+    >
+    
+          <LinearLayout 
+            android:orientation="vertical"
+            android:id="@+id/boxwn" 
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+			android:paddingTop="10dip"
+			android:paddingBottom="10dip" android:layout_height="wrap_content" android:gravity="center">
+            
+            
+              <ImageButton android:src="@drawable/icon" 
+              android:layout_height="wrap_content" 
+              android:layout_width="wrap_content" android:id="@+id/action_player">
+              </ImageButton>
+              <TextView android:id="@+id/twBoxwn" android:layout_width="wrap_content" android:text="TextView" android:layout_height="wrap_content"></TextView>   
+    
+    
+    
+           </LinearLayout>
+           
+           
+           <LinearLayout 
+            android:orientation="vertical"
+            android:id="@+id/boxws" 
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+			android:paddingTop="10dip"
+			android:paddingBottom="10dip" android:layout_height="wrap_content" android:gravity="center">
+            
+            >
+               <ImageButton android:src="@drawable/icon" 
+               android:layout_height="wrap_content" 
+               android:layout_width="wrap_content" android:id="@+id/action_playlists">
+               </ImageButton>
+               <TextView android:id="@+id/twBoxws" 
+               android:layout_width="wrap_content" 
+               android:text="TextView" 
+               android:layout_height="wrap_content" 
+               ></TextView>   
+    
+           </LinearLayout>
+        
+    
+    </LinearLayout>
+
+    
+    
+    <LinearLayout 
+    android:orientation="vertical"
+    android:id="@+id/east" 
+    android:paddingLeft="10dip"
+	android:paddingRight="10dip"
+	android:paddingTop="0dip"
+	android:paddingBottom="0dip" 
+	android:layout_height="fill_parent" 
+	android:layout_width="wrap_content" android:gravity="center">
+    >
+    
+          <LinearLayout 
+            android:orientation="vertical"
+            android:id="@+id/boxen" 
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+			android:paddingTop="10dip"
+			android:paddingBottom="10dip" android:layout_height="wrap_content" android:gravity="center">
+            
+            
+              <ImageButton android:src="@drawable/icon" 
+              android:layout_height="wrap_content" 
+              android:layout_width="wrap_content" android:id="@+id/action_statics">
+              </ImageButton>
+              <TextView android:id="@+id/twBoxen" android:layout_width="wrap_content" android:text="TextView" android:layout_height="wrap_content"></TextView>   
+    
+    
+    
+           </LinearLayout>
+           
+           
+           <LinearLayout 
+            android:orientation="vertical"
+            android:id="@+id/boxes" 
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+			android:paddingTop="10dip"
+			android:paddingBottom="10dip" android:layout_height="wrap_content" android:gravity="center">
+            
+            >
+               <ImageButton android:src="@drawable/icon" 
+               android:layout_height="wrap_content" 
+               android:layout_width="wrap_content" android:id="@+id/ibBoxes">
+               </ImageButton>
+               <TextView android:id="@+id/twBoxes" android:layout_width="wrap_content" android:text="TextView" android:layout_height="wrap_content"></TextView>   
+    
+    
+           </LinearLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</LinearLayout>
