@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+C:\Dropbox\Dropbox\Sena-Android\DroidExamples\.metadata\.plugins\org.eclipse.jdt.core
+2514854722.index
+1492492080.index

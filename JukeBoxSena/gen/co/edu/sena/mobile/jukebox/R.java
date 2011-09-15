@@ -25,13 +25,15 @@ public final class R {
         public static final int boxes=0x7f07000c;
         public static final int boxwn=0x7f070002;
         public static final int boxws=0x7f070005;
-        public static final int btnPlay=0x7f070016;
+        public static final int btnForward=0x7f070017;
+        public static final int btnPlayOrPause=0x7f070016;
+        public static final int btnReward=0x7f070015;
         public static final int dash=0x7f070000;
         public static final int east=0x7f070008;
         public static final int ibBoxes=0x7f07000d;
-        public static final int imageButton1=0x7f070015;
-        public static final int imageButton2=0x7f070019;
-        public static final int imageButton3=0x7f070017;
+        public static final int imageButton1=0x7f070019;
+        public static final int imageButton2=0x7f07001a;
+        public static final int imageButton3=0x7f07001b;
         public static final int ivImageAlbum=0x7f070012;
         public static final int linearLayout1=0x7f07000f;
         public static final int relativeLayout1=0x7f070013;
@@ -51,7 +53,7 @@ public final class R {
         public static final int statics=0x7f030002;
     }
     public static final class raw {
-        public static final int roxanne=0x7f040000;
+        public static final int moonlite=0x7f040000;
     }
     public static final class string {
         public static final int app_name=0x7f060000;

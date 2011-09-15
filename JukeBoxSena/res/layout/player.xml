@@ -31,12 +31,18 @@
    		 android:textColor="@color/verde"   		 
    		 android:layout_width="fill_parent" 
    		 android:layout_height="wrap_content" 
-   		 android:text="@string/nombrecancion" android:id="@+id/tvSongName" android:ellipsize="marquee">
+   		 android:text="@string/nombrecancion" 
+   		 android:id="@+id/tvSongName" 
+   		 android:ellipsize="marquee">
    	</TextView>
 
 
 	<ImageView android:src="@drawable/u2" 
-	android:layout_width="match_parent" android:layout_height="370dp" android:id="@+id/ivImageAlbum"></ImageView>
+	android:layout_width="match_parent" 
+	android:layout_height="370dp" 
+	android:id="@+id/ivImageAlbum"
+	></ImageView>
+	
 	<RelativeLayout 
 	android:id="@+id/relativeLayout1" 
 	android:layout_width="match_parent" android:layout_height="wrap_content">
@@ -51,25 +57,25 @@
 		android:layout_marginRight="22dp">
 		</TextView>
 		<ImageButton android:layout_height="wrap_content" 
-			android:id="@+id/imageButton1" 
+			android:id="@+id/btnReward" 
 			android:src="@android:drawable/ic_media_previous" 
 			android:layout_width="wrap_content" 
 			android:layout_alignParentTop="true" 
 			android:layout_alignParentLeft="true">
 		</ImageButton>
 		<ImageButton android:layout_height="wrap_content" 
-			android:id="@+id/btnPlay" 
+			android:id="@+id/btnPlayOrPause" 
 			android:src="@android:drawable/ic_media_play" 
 			android:layout_width="wrap_content" 
 			android:layout_alignParentTop="true" 
-			android:layout_toRightOf="@+id/imageButton1">
+			android:layout_toRightOf="@+id/btnReward">
 		</ImageButton>
 		<ImageButton android:layout_height="wrap_content"
-			 android:id="@+id/imageButton3" 
+			 android:id="@+id/btnForward" 
 			 android:src="@android:drawable/ic_media_next" 
 			 android:layout_width="wrap_content" 
 			 android:layout_alignParentTop="true" 
-			 android:layout_toRightOf="@+id/btnPlay">
+			 android:layout_toRightOf="@+id/btnPlayOrPause">
 		 </ImageButton>
 		
 	</RelativeLayout>
