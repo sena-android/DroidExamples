@@ -19,10 +19,9 @@
    		 android:textSize="15dp" 
    		 android:text="@string/contadorLista"
    		 android:textColor="@color/verde"   		 
-   		 android:layout_width="wrap_content" 
    		 android:layout_height="wrap_content"
    		 
-   		 >
+   		 android:layout_width="match_parent" android:gravity="center_horizontal">
    		 </TextView>
     
     </LinearLayout>

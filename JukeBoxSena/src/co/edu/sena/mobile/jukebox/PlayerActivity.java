@@ -62,8 +62,10 @@ public class PlayerActivity extends Activity {
         
 	   
 		private void commandToPlayer(String command) {	
+			
 			Intent intent = new Intent(this,PlayerService.class);
 			Bundle bundle = new Bundle();
+			
 			bundle.putCharSequence(PlayerService.COMMAND_KEY, command);
 			intent.putExtras(bundle);
 			

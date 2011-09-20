@@ -13,7 +13,7 @@ import co.edu.sena.mobile.jukebox.R;
 /**
  * Esta clase es un servicio o proceso en background que reproduce un 
  * archivo multimedia. Los servicios no estan asociados a una interface
- * gr‡fica como si lo estan las actividades, pero pueden estar atados a
+ * gr√°fica como si lo estan las actividades, pero pueden estar atados a
  * una actividad. Esto quiere decir que la existencia del Servicio puede estar
  * ligada a una Actividad.
  * 
@@ -23,6 +23,7 @@ import co.edu.sena.mobile.jukebox.R;
 public class PlayerService extends Service {
 
 	private MediaPlayer mediaPlayer; 
+	
 	public static final String COMMAND_PLAY="play";
 	public static final String COMMAND_PAUSE="pause";
 	public static final String COMMAND_FORWARD="forward";
@@ -54,6 +55,7 @@ public class PlayerService extends Service {
 	public void onDestroy (  ) {
 
 		mediaPlayer.stop();
+		
 	}
 	
 	@Override
