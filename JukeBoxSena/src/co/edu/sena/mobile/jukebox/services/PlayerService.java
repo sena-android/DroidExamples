@@ -46,7 +46,7 @@ public class PlayerService extends Service {
 	@Override
 	public void onCreate() {
 		
-		mediaPlayer = MediaPlayer.create(this, R.raw.moonlite);
+		mediaPlayer = MediaPlayer.create(this, R.id.tvSongName);
 		mediaPlayer.setLooping(false); // Set looping
 		
 	}
@@ -63,7 +63,7 @@ public class PlayerService extends Service {
 		
 		Bundle bundle = intent.getExtras();
 		String command = bundle.getCharSequence(COMMAND_KEY).toString();
-		Toast.makeText(this, "Starting ...."+bundle.getCharSequence(COMMAND_KEY), Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "command:"+bundle.getCharSequence(COMMAND_KEY), Toast.LENGTH_SHORT).show();
 		
 		if(COMMAND_PAUSE.equalsIgnoreCase(command))
 		    mediaPlayer.pause();

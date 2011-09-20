@@ -44,7 +44,7 @@ public class PlayerActivity extends Activity {
 				    //establecemos a pause como el comando a enviar al servicio
 					  command = PlayerService.COMMAND_PAUSE;
 					  playing = false;
-					  //Cambiamos la imagen del boton
+					  //Cambiamos la imagen del boton 
 					  ibPlayOrButton.setImageResource(android.R.drawable.ic_media_pause);
 					}
 					

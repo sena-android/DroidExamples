@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+    
+    
+<!-- Esta etiqueta nos permite reutilizar el xml que define el action bar en cada una de las interfaces que la necesiten  -->
+<include android:id="@+id/action_bar_port" layout="@layout/action_bar" />
+
+
+
+<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:padding="6dip">
+	
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1">
+		<Button android:onClick="onActionTheOneClick" 
+		android:drawableTop="@drawable/dashboard_button_selector" 
+		android:text="@string/dashboard_action" 
+		android:id="@+id/action_one_button" style="@style/HomeButton"></Button>
+	    <Button android:id="@+id/action_two_button"
+	        style="@style/HomeButton"
+	     
+	        android:text="Player"
+	        android:drawableTop="@drawable/dashboard_button_selector"/>
+	</LinearLayout>
+
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1">
+	    <Button android:id="@+id/action_three_button"
+	        style="@style/HomeButton"
+	 
+	        android:text="@string/dashboard_action"
+	        android:drawableTop="@drawable/dashboard_button_selector"/>
+	    <Button android:id="@+id/action_four_button"
+	        style="@style/HomeButton"
+	
+	        android:text="@string/dashboard_action"
+	        android:drawableTop="@drawable/dashboard_button_selector"/>
+	</LinearLayout>
+	
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:padding="6dip">
+	
+		<Button android:id="@+id/action_five_button"
+			style="@style/HomeButton"
+
+			android:text="@string/dashboard_action"
+			android:drawableTop="@drawable/dashboard_button_selector"/>
+			
+		<Button android:id="@+id/action_six_button"
+			style="@style/HomeButton"
+
+			android:text="@string/dashboard_action"
+			android:drawableTop="@drawable/dashboard_button_selector"/>
+	</LinearLayout>
+		
+</LinearLayout>
+
+<LinearLayout
+     android:id="@+id/now_playing_loading"
+     android:layout_width="fill_parent"
+     android:layout_height="@dimen/now_playing_height"
+     android:orientation="horizontal"
+     android:background="#eee"
+     android:gravity="center">
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="6dip"
+            android:indeterminate="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/now_playing_loading"/>
+</LinearLayout>
+
+    
+</LinearLayout>
