@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import co.edu.sena.mobile.jukebox.services.PlayerService;
 /**
- *  
+ *  Actividad que representa la UI de un reproductor.
  * 
  * 
  * @author Gabriel
