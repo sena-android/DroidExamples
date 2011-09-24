@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, SharedPreferencesActivity!</string>
+    <string name="app_name">SharedPreferences</string>
+    <string name="allow_looping_playlist">Repetir lista de reproducción</string>
+</resources>

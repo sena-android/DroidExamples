@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Este xml define cada item de la lista. Este es un GroupView llamado RelativeLayout que nos permite 
+   colocar objetos en posiciones relativas a otros.    
+-->
+<!-- 
+  Un item del mismo tipo pudo haber sido creado usando varios LinearLayout y otros View anidados
+  pero el RelativeLayout tiene ventaja en performance al ser pintado por el sistema Android, ya que
+  no tenemos componentes anidados entonces el proceso de pintado solo tendrá que recorrer
+  un árbol de componentes de pocos niveles de profundidad.
+ -->
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    >
+    <!-- Cada componente tiene parámetros android:xxxxx que nos permiten definir su comportamiento,  
+         algunos parámetros aceptan valores cualitativos como fill_parent que es igual que match parent,
+         esto significa que el componente puede ocupar todo lo que pueda a lo ancho o a lo alto del componente
+         en el cual estan contenidos. Wrap_content significa que el ancho o el alto se acomodan segun segun el espacio
+         que ocupen los componentes gráficos  que contenga la vista. 
+    
+    -->
+    <!--     
+    Cada componente debe tener un id único que nos permita usarlo programaticamente.    
+     -->
+    
+    
+    <ImageButton 
+    android:src="@drawable/icon" 
+    android:layout_height="wrap_content"     
+    android:layout_width="wrap_content" 
+    android:id="@+id/dataButton" 
+    android:layout_alignParentLeft="true"
+    ></ImageButton>
+    
+       <!-- Al boton le definimos un icono con el parámetro src. @drawable/icon esto significa que esta en alguna
+       carpeta drawable y que tiene la imágen tiene por nombre icon.     
+       -->
+    
+    
+    <TextView android:id="@+id/dataContent" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent" 
+    android:text="TextView"
+    android:singleLine="true"
+    android:ellipsize="marquee"		
+    android:layout_toRightOf="@+id/dataButton"    
+    ></TextView>
+    
+       <!--  android:ellipsize="marquee" con este parámetro el texto del textview se comporta
+             como una marquesina.	   
+       -->   
+
+
+</RelativeLayout>
