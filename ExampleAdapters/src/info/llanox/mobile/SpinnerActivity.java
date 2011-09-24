@@ -20,7 +20,7 @@ public class SpinnerActivity extends Activity{
         
         //El constructor de este adapter recibe el contexto, un xml que representa 
         //un item simple para el spinner y los datos a ser mostrados en cada item
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,items);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);        
         spSimple.setAdapter(adapter);
         

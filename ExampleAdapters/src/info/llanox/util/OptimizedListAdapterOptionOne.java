@@ -92,9 +92,6 @@ public class OptimizedListAdapterOptionOne extends ArrayAdapter<Data>{
                //Traemos el textView del item_data que hemos inflado
                viewHolder.text = (TextView) v.findViewById(R.id.dataContent);
                v.setTag(viewHolder);
-           }else{
-        	   
-        	   
            }
            
          
