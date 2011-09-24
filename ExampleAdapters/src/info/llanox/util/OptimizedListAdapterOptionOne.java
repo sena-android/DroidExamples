@@ -2,6 +2,7 @@ package info.llanox.util;
 
 
 
+import info.llanox.mobile.CustomListActvity;
 import info.llanox.mobile.R;
 import info.llanox.mobile.model.Data;
 
@@ -70,6 +71,9 @@ public class OptimizedListAdapterOptionOne extends ArrayAdapter<Data>{
 	}
 
 	
+
+
+
 	public View  getView(int position, View convertView, ViewGroup parent) { 
 		
 		// Usando vistas ya existentes se ahorra memoria y tiempo de procesador.
@@ -77,6 +81,7 @@ public class OptimizedListAdapterOptionOne extends ArrayAdapter<Data>{
 		//settear nuevos datos
 		   
 		   View v = convertView;
+		   
            if (v == null) {
         	   //Aquï¿½ inflamos el layout xml que representa cada item de la lista
         	   // Inflar significa aca que obtenemos un objeto java que representa el
@@ -91,6 +96,7 @@ public class OptimizedListAdapterOptionOne extends ArrayAdapter<Data>{
                viewHolder.imageButton = (ImageButton) v.findViewById(R.id.dataButton);
                //Traemos el textView del item_data que hemos inflado
                viewHolder.text = (TextView) v.findViewById(R.id.dataContent);
+               
                v.setTag(viewHolder);
            }
            
@@ -124,7 +130,7 @@ public class OptimizedListAdapterOptionOne extends ArrayAdapter<Data>{
 	private int randomColor() {
 		Random ran = new Random();
 		int n  = colors.length;
-		//me devuelve un nï¿½mero al azar entre 0 y n
+		//me devuelve un número al azar entre 0 y n
 		int selected = ran.nextInt(n);
 		
 		return colors[selected];

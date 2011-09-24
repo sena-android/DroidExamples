@@ -15,7 +15,7 @@ public class SpinnerActivity extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.simple_spinner);
-        //Traemos el objeto java Spinner que esta definido en el XML simple_spinner
+        //Traemos el objeto java Spinner que esta definido en el XML simp21le_spinner
         Spinner spSimple = (Spinner) this.findViewById(R.id.spSimple);
         
         //El constructor de este adapter recibe el contexto, un xml que representa 

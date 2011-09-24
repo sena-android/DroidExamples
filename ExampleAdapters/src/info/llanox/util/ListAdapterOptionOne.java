@@ -63,6 +63,7 @@ public class ListAdapterOptionOne extends ArrayAdapter<Data>{
 		// existing layout. 
 		   
 		   View v = convertView;
+		   
            if (v == null) {
         	   //Aqu� inflamos el layout xml que representa cada item de la lista
         	   // Inflar significa aca que obtenemos un objeto java que representa el

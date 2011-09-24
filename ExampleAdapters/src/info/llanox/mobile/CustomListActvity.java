@@ -1,22 +1,22 @@
 package info.llanox.mobile;
 import info.llanox.mobile.model.Data;
-import info.llanox.util.ListAdapterOptionOne;
 import info.llanox.util.OptimizedListAdapterOptionOne;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.util.Log;
 
 public class CustomListActvity extends ListActivity {
 	private List<Data> listData = new ArrayList<Data>();
+	private static final String TAG="CustomListActvity";
 	
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
+		
 		
 		   Calendar cal = Calendar.getInstance();
 	        Data data = null;
@@ -27,9 +27,13 @@ public class CustomListActvity extends ListActivity {
 	         listData.add(data);
 	        }
 		
-		setListAdapter(new OptimizedListAdapterOptionOne(this,R.id.dataContent,listData));
-		
+		setListAdapter(new OptimizedListAdapterOptionOne(this,R.id.itemLayout,listData));
+	Log.i(TAG, "onCreate ........");
 	
 	}
+	
+
+	
+	
 
 }

@@ -17,7 +17,8 @@
 
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"    
+    android:layout_height="fill_parent"
+    android:id="@+id/itemLayout"     
     >
     <!-- Cada componente tiene parámetros android:xxxxx que nos permiten definir su comportamiento,  
          algunos parámetros aceptan valores cualitativos como fill_parent que es igual que match parent,
