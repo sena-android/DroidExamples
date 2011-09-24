@@ -72,10 +72,9 @@ public class OptimizedListAdapterOptionOne extends ArrayAdapter<Data>{
 	
 	public View  getView(int position, View convertView, ViewGroup parent) { 
 		
-		// Using existing rows saves memory and CPU consumption. To use this in
-		// your adapter, you have to check if convertView is not null and if it
-		// is not then you can re-use it by setting the new data into the
-		// existing layout. 
+		// Usando vistas ya existentes se ahorra memoria y tiempo de procesador.
+		//Para esto debe checkear si convertView es no nulo para reutilizar la vista para 
+		//settear nuevos datos
 		   
 		   View v = convertView;
            if (v == null) {
@@ -85,7 +84,9 @@ public class OptimizedListAdapterOptionOne extends ArrayAdapter<Data>{
                LayoutInflater vi = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                v = vi.inflate(R.layout.item_data, null);
                //Usamos el vieHolder para mantener una instancia del los objetos de la vista del otem
-               //y poder reusarlos al pintar una nueva
+               //y poder reusarlos al pintar una nueva.
+               
+               // ViewHolder  hace un 175% mas eficiente un ListView en especial para lista de datos grandes.
                final ViewHolder viewHolder = new ViewHolder();
                viewHolder.imageButton = (ImageButton) v.findViewById(R.id.dataButton);
                //Traemos el textView del item_data que hemos inflado
