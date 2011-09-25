@@ -1,6 +1,6 @@
 package info.llanox.mobile;
 import info.llanox.mobile.model.Data;
-import info.llanox.util.OptimizedListAdapterOptionOne;
+import info.llanox.util.OptimizedListAdapter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -27,7 +27,7 @@ public class CustomListActvity extends ListActivity {
 	         listData.add(data);
 	        }
 		
-		setListAdapter(new OptimizedListAdapterOptionOne(this,R.id.itemLayout,listData));
+		setListAdapter(new OptimizedListAdapter(this,R.id.itemLayout,listData));
 	Log.i(TAG, "onCreate ........");
 	
 	}

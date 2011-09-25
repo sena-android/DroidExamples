@@ -2,6 +2,7 @@ package info.llanox.util;
 
 
 
+import info.llanox.mobile.CustomListActvity;
 import info.llanox.mobile.R;
 import info.llanox.mobile.model.Data;
 
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.ImageButton;
 
 /**
  * Esta clase es un adaptador que nos permite pintar
@@ -42,25 +44,41 @@ import android.widget.TextView;
  * @author J.Gabriel G. - llanox
  * **/
 
-public class ListAdapterOptionOne extends ArrayAdapter<Data>{
+public class OptimizedListAdapter extends ArrayAdapter<Data>{
+	
+	
+	static class ViewHolder {
+		protected TextView text;
+		protected ImageButton imageButton;
+	
+	}
+	
+	
+	
+	
+	
+	
+	
     //Lista que contiene objetos de tipo Data
 	private List<Data> info;
 	//Arreglo de colores disponibles a ser mostrados al azar. 
 	private int colors[] ={Color.BLUE,Color.BLACK,Color.CYAN,Color.DKGRAY,Color.GRAY,Color.GREEN,Color.LTGRAY,Color.MAGENTA,Color.RED,Color.WHITE,Color.YELLOW};
 	
-	public ListAdapterOptionOne(Context context,int idView, List<Data> info) {
+	public OptimizedListAdapter(Context context,int idView, List<Data> info) {
 		super(context,  idView, info);
 		this.info = info;
 		
 	}
 
 	
+
+
+
 	public View  getView(int position, View convertView, ViewGroup parent) { 
 		
-		// Using existing rows saves memory and CPU consumption. To use this in
-		// your adapter, you have to check if convertView is not null and if it
-		// is not then you can re-use it by setting the new data into the
-		// existing layout. 
+		// Usando vistas ya existentes se ahorra memoria y tiempo de procesador.
+		//Para esto debe checkear si convertView es no nulo para reutilizar la vista para 
+		//settear nuevos datos
 		   
 		   View v = convertView;
 		   
@@ -70,10 +88,21 @@ public class ListAdapterOptionOne extends ArrayAdapter<Data>{
         	   // layout inflado
                LayoutInflater vi = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                v = vi.inflate(R.layout.item_data, null);
+               //Usamos el vieHolder para mantener una instancia del los objetos de la vista del otem
+               //y poder reusarlos al pintar una nueva.
+               
+               // ViewHolder  hace un 175% mas eficiente un ListView en especial para lista de datos grandes.
+               final ViewHolder viewHolder = new ViewHolder();
+               viewHolder.imageButton = (ImageButton) v.findViewById(R.id.dataButton);
+               //Traemos el textView del item_data que hemos inflado
+               viewHolder.text = (TextView) v.findViewById(R.id.dataContent);
+               
+               v.setTag(viewHolder);
            }
            
-           //Traemos el textView del item_data que hemos inflado
-           TextView tv = (TextView) v.findViewById(R.id.dataContent);
+         
+           ViewHolder viewHolder = (ViewHolder) v.getTag();
+           TextView tv = viewHolder.text;
            
            //verificamos si es par, entonces le aplicamos un color aleatorio
            if( position%2 == 0)
@@ -101,7 +130,7 @@ public class ListAdapterOptionOne extends ArrayAdapter<Data>{
 	private int randomColor() {
 		Random ran = new Random();
 		int n  = colors.length;
-		//me devuelve un nï¿½mero al azar entre 0 y n
+		//me devuelve un número al azar entre 0 y n
 		int selected = ran.nextInt(n);
 		
 		return colors[selected];
