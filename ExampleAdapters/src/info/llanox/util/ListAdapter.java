@@ -57,17 +57,18 @@ public class ListAdapter extends ArrayAdapter<Data>{
 	
 	public View  getView(int position, View convertView, ViewGroup parent) { 
 		
-		// Using existing rows saves memory and CPU consumption. To use this in
-		// your adapter, you have to check if convertView is not null and if it
-		// is not then you can re-use it by setting the new data into the
-		// existing layout. 
+		// Usando vistas ya existentes se ahorra memoria y tiempo de procesador.
+		//Para esto debe checkear si convertView es no nulo para reutilizar la vista para 
+		//settear nuevos datos
 		   
 		   View v = convertView;
 		   
            if (v == null) {
         	   //Aqu� inflamos el layout xml que representa cada item de la lista
-        	   // Inflar significa aca que obtenemos un objeto java que representa el
+        	   // Inflar significa que obtenemos un objeto java que representa el
         	   // layout inflado
+        	   
+        	   //Se obtiene el inflador
                LayoutInflater vi = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                v = vi.inflate(R.layout.item_data, null);
            }
