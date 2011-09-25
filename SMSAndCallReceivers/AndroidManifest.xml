@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="co.sena.mobile.app"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+    
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name"> 
+        
+     
+      <activity android:name=".NewActivity"
+                  android:label="IncomingNumber">
+      </activity>
+                
+         <receiver android:name=".ReceptorSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".ReceptorLlamada">
+            <intent-filter>
+             <action android:name="android.intent.action.PHONE_STATE"></action>
+            </intent-filter>
+        </receiver>
+        
+         <service android:name=".ServiceExecutor"/>
+
+  
+
+    </application>
+</manifest>

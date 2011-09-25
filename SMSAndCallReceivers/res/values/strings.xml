@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">BroadCastReceiver</string>
+    <string name="app_name">BroadCastReceiver</string>
+    <string name="calling">llamando desde :</string>
+</resources>
