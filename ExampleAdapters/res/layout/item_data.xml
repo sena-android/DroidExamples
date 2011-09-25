@@ -56,7 +56,8 @@
     
        <!--  android:ellipsize="marquee" con este parámetro el texto del textview se comporta
              como una marquesina.	   
-       -->   
+       -->
+   
 
 
 </RelativeLayout>
