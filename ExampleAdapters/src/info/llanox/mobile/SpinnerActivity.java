@@ -4,7 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
-
+/**
+ * Clase que usa el un adaptador simple proporcionado por el SDK del Android
+ * para mostrar datos simples. En este caso un arreglo de Strings.
+ * 
+ * @author J.Gabriel G. - llanox 
+ * */
 public class SpinnerActivity extends Activity{
 	
 	String[] items = { "Uno", "Dos", "Tres", "Cuatro", 

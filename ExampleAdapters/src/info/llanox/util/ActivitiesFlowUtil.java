@@ -9,7 +9,7 @@ public class ActivitiesFlowUtil {
 
 	/*
 	 * Add a navigation rule, adding a click listener to a view. It allow us
-	 * leave @from activity and start @to Activity.
+	 * leave @from activity and arrive @to Activity.
 	 */
 	public static void addNavigationRule(int idView, final Activity from,	final Class to) {
 

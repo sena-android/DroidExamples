@@ -43,14 +43,24 @@ import android.widget.TextView;
  * **/
 
 public class ListAdapter extends ArrayAdapter<Data>{
-    //Lista que contiene objetos de tipo Data
-	private List<Data> info;
+
 	//Arreglo de colores disponibles a ser mostrados al azar. 
-	private int colors[] ={Color.BLUE,Color.BLACK,Color.CYAN,Color.DKGRAY,Color.GRAY,Color.GREEN,Color.LTGRAY,Color.MAGENTA,Color.RED,Color.WHITE,Color.YELLOW};
+	private int mColors[] ={Color.BLUE,Color.BLACK,Color.CYAN,Color.DKGRAY,Color.GRAY,Color.GREEN,Color.LTGRAY,Color.MAGENTA,Color.RED,Color.WHITE,Color.YELLOW};
+	private List<Data> mData ;
+	private int mItemLayotId;
 	
-	public ListAdapter(Context context,int idView, List<Data> info) {
-		super(context,  idView, info);
-		this.info = info;
+	//Aunque recibe como parametro el id del xml que define el item
+	public ListAdapter(Context context,int textViewId, List<Data> data) {
+		super(context,  textViewId, data);
+		mData = data;
+
+		
+	}
+	
+	public ListAdapter(Context context,int itemLayoutId, int textViewId, List<Data> listData) {
+		super(context,itemLayoutId,textViewId,listData);
+		mItemLayotId =itemLayoutId;
+		mData = listData;
 		
 	}
 
@@ -61,39 +71,40 @@ public class ListAdapter extends ArrayAdapter<Data>{
 		//Para esto debe checkear si convertView es no nulo para reutilizar la vista para 
 		//settear nuevos datos
 		   
-		   View v = convertView;
+		   View view = convertView;
 		   
-           if (v == null) {
+           if (view == null) {
         	   //Aqu� inflamos el layout xml que representa cada item de la lista
         	   // Inflar significa que obtenemos un objeto java que representa el
         	   // layout inflado
         	   
         	   //Se obtiene el inflador
                LayoutInflater vi = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-               v = vi.inflate(R.layout.item_data, null);
+               
+               view = vi.inflate(mItemLayotId, null);
            }
            
            //Traemos el textView del item_data que hemos inflado
-           TextView tv = (TextView) v.findViewById(R.id.dataContent);
+           TextView textView = (TextView) view.findViewById(R.id.dataContent);
            
            //verificamos si es par, entonces le aplicamos un color aleatorio
            if( position%2 == 0)
-        	   tv.setTextColor(randomColor());
+        	   textView.setTextColor(randomColor());
            
            //Obtonemos un objeto data  que corresponda a la posici�n indicada el cual contiene la fecha
            //a ser mostrada
-           Data data = info.get(position);
+           Data data = mData.get(position);
            
            // con el  + estamos concatenando la representaci�n en string de Date
            // con un string vac�o. Esto lo hice para obligar al objeto Date 
            // a mostrar su representaci�n en string y colocarla en el textView
            Date date = data.getActualDate();
            
-           tv.setText(date +"");
+           textView.setText(date +"");
            
      
 		
-		return v;
+		return view;
 	}
 
 
@@ -101,10 +112,10 @@ public class ListAdapter extends ArrayAdapter<Data>{
 	//que se encuentra en un arreglo inicialmente definido
 	private int randomColor() {
 		Random ran = new Random();
-		int n  = colors.length;
+		int n  = mColors.length;
 		//me devuelve un n�mero al azar entre 0 y n
 		int selected = ran.nextInt(n);
 		
-		return colors[selected];
+		return mColors[selected];
 	}
 }

@@ -48,29 +48,30 @@ public class OptimizedListAdapter extends ArrayAdapter<Data>{
 	
 	
 	static class ViewHolder {
-		protected TextView text;
-		protected ImageButton imageButton;
+		protected TextView sText;
+		protected ImageButton sImageButton;
 	
 	}
-	
-	
-	
-	
-	
-	
-	
-    //Lista que contiene objetos de tipo Data
-	private List<Data> info;
+		
+  
 	//Arreglo de colores disponibles a ser mostrados al azar. 
-	private int colors[] ={Color.BLUE,Color.BLACK,Color.CYAN,Color.DKGRAY,Color.GRAY,Color.GREEN,Color.LTGRAY,Color.MAGENTA,Color.RED,Color.WHITE,Color.YELLOW};
+	private int mColors[] ={Color.BLUE,Color.BLACK,Color.CYAN,Color.DKGRAY,Color.GRAY,Color.GREEN,Color.LTGRAY,Color.MAGENTA,Color.RED,Color.WHITE,Color.YELLOW};
+	private int mItemLayotId;
 	
-	public OptimizedListAdapter(Context context,int idView, List<Data> info) {
-		super(context,  idView, info);
-		this.info = info;
+	public OptimizedListAdapter(Context context,int textViewId, List<Data> info) {
+		super(context,  textViewId, info);		
+	}
+
+
+
+
+	public OptimizedListAdapter(Context context,int itemLayoutId, int textViewId, List<Data> listData) {
+		super(context,itemLayoutId,textViewId,listData);
+		mItemLayotId =itemLayoutId;
 		
 	}
 
-	
+
 
 
 
@@ -80,29 +81,30 @@ public class OptimizedListAdapter extends ArrayAdapter<Data>{
 		//Para esto debe checkear si convertView es no nulo para reutilizar la vista para 
 		//settear nuevos datos
 		   
-		   View v = convertView;
+		   View view = convertView;
 		   
-           if (v == null) {
+           if (view == null) {
         	   //Aquï¿½ inflamos el layout xml que representa cada item de la lista
         	   // Inflar significa aca que obtenemos un objeto java que representa el
         	   // layout inflado
                LayoutInflater vi = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-               v = vi.inflate(R.layout.item_data, null);
+               view = vi.inflate(mItemLayotId, null);
+              
                //Usamos el vieHolder para mantener una instancia del los objetos de la vista del otem
                //y poder reusarlos al pintar una nueva.
                
                // ViewHolder  hace un 175% mas eficiente un ListView en especial para lista de datos grandes.
                final ViewHolder viewHolder = new ViewHolder();
-               viewHolder.imageButton = (ImageButton) v.findViewById(R.id.dataButton);
+               viewHolder.sImageButton = (ImageButton) view.findViewById(R.id.dataButton);
                //Traemos el textView del item_data que hemos inflado
-               viewHolder.text = (TextView) v.findViewById(R.id.dataContent);
+               viewHolder.sText = (TextView) view.findViewById(R.id.dataContent);
                
-               v.setTag(viewHolder);
+               view.setTag(viewHolder);
            }
            
          
-           ViewHolder viewHolder = (ViewHolder) v.getTag();
-           TextView tv = viewHolder.text;
+           ViewHolder viewHolder = (ViewHolder) view.getTag();
+           TextView tv = viewHolder.sText;
            
            //verificamos si es par, entonces le aplicamos un color aleatorio
            if( position%2 == 0)
@@ -110,7 +112,7 @@ public class OptimizedListAdapter extends ArrayAdapter<Data>{
            
            //Obtonemos un objeto data  que corresponda a la posiciï¿½n indicada el cual contiene la fecha
            //a ser mostrada
-           Data data = info.get(position);
+           Data data = this.getItem(position);
            
            // con el  + estamos concatenando la representaciï¿½n en string de Date
            // con un string vacï¿½o. Esto lo hice para obligar al objeto Date 
@@ -121,7 +123,7 @@ public class OptimizedListAdapter extends ArrayAdapter<Data>{
            
      
 		
-		return v;
+		return view;
 	}
 
 
@@ -129,10 +131,10 @@ public class OptimizedListAdapter extends ArrayAdapter<Data>{
 	//que se encuentra en un arreglo inicialmente definido
 	private int randomColor() {
 		Random ran = new Random();
-		int n  = colors.length;
-		//me devuelve un número al azar entre 0 y n
+		int n  = mColors.length;
+		//me devuelve un nï¿½mero al azar entre 0 y n
 		int selected = ran.nextInt(n);
 		
-		return colors[selected];
+		return mColors[selected];
 	}
 }
