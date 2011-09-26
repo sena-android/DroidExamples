@@ -7,6 +7,19 @@ import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.util.Log;
 
+
+/**
+ * Este es un broadcastreceiver que escucha eventos del sistema 
+ * y redirecciona al servicio o actividad indicado para manejarlo.  
+ * 
+ * Los broadcastreceiver deben estar matriculados en el AndroidManifest.xml
+ * del proyecto y debe tener al menos Intent Filter que define sobre cuales
+ * eventos va a responderel broadcastreceivers.
+ * 
+ * @author J.Gabriel G. - llanox
+ * 
+ * */
+
 public class ReceptorSms extends BroadcastReceiver {
 
 	private static final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";

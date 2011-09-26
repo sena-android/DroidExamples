@@ -6,6 +6,12 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.widget.Toast;
 
+/**
+ * Un servicio se usa para ejecutar operaciones de larga duración en background.
+ * Un servicio no tiene una interface gráfica.
+ * 
+ * */
+
 public class ServiceExecutor extends Service {
 
 	@Override

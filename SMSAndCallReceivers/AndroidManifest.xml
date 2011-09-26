@@ -5,7 +5,10 @@
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="8" />
     
+    <!-- Permisos para recibir y leer los mensajes de texto -->
     <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    
+    <!-- Permisos para recibir y leer los eventos de cambios de estado del teléfono -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 
     <application android:icon="@drawable/icon" android:label="@string/app_name"> 
@@ -20,13 +23,14 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
             </intent-filter>
         </receiver>
-        
+    
+    <!-- A los broadcastreceivers se les deben etiquetar con un Intent Filter para que respondan a un determinado evento -->    
         <receiver android:name=".ReceptorLlamada">
             <intent-filter>
              <action android:name="android.intent.action.PHONE_STATE"></action>
             </intent-filter>
         </receiver>
-        
+   <!-- Como las Actividades o BroadCastReceivers los servicios deben ser también matriculados-->     
          <service android:name=".ServiceExecutor"/>
 
   

@@ -7,6 +7,22 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 
+/**
+ * Este es un broadcastreceiver que escucha eventos del sistema 
+ * y redirecciona al servicio o actividad indicado para manejarlo.  
+ * 
+ * Los broadcastreceiver deben estar matriculados en el AndroidManifest.xml
+ * del proyecto y debe tener al menos Intent Filter que define sobre cuales
+ * eventos va a responder el broadcastreceivers.
+ * 
+ * En el AndroidManifest.xml se deben definir los permisos que sea necesarios
+ * para que los componentes de aplicación accedan a ciertos recursos
+ * del sistema.
+ * 
+ * @author J.Gabriel G. - llanox
+ * 
+ * */
+
 public class ReceptorLlamada extends BroadcastReceiver {
   public static final String TAG="ReceptorLlamada";
   public static final String INCOMING_NUMBER="incoming_number";
