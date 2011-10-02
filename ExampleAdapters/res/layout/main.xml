@@ -4,13 +4,25 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" android:layout_gravity="center|center_vertical">
     
+    <TextView 
+    android:text="TextView" 
+    android:id="@+id/textView1" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:background="#FE9A2E"
+    >
+    
+    </TextView>
+    
     <LinearLayout 
     android:layout_width="match_parent" 
     android:layout_height="wrap_content" 
     android:id="@+id/linearLayout1" 
     android:orientation="vertical" 
     android:layout_gravity="center_vertical" 
-    android:layout_marginTop="150dp">
+    android:layout_marginTop="150dp"
+    
+    >
     
         <Button 
         android:text="Spinner" 
@@ -25,6 +37,8 @@
         android:layout_width="match_parent" 
         android:id="@+id/btn_custom_list_view">
         </Button>
+        
+        
         
       
         
