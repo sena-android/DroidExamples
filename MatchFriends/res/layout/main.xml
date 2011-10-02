@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    <TextView android:layout_height="wrap_content" android:id="@+id/titulo" android:text="@string/title"  android:layout_width="match_parent"></TextView>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:id="@+id/linearLayout1" android:layout_marginTop="54dp">
+        <ImageButton android:layout_height="wrap_content" android:layout_width="113dp" android:src="@drawable/icon" android:layout_gravity="center" android:id="@+id/btnGame"></ImageButton>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:id="@+id/linearLayout2" android:layout_marginTop="42dp">
+        <ImageButton android:layout_height="wrap_content" android:layout_width="116dp" android:id="@+id/imageButton2" android:src="@drawable/icon"  android:layout_gravity="center"></ImageButton>
+    </LinearLayout>
+</LinearLayout>
