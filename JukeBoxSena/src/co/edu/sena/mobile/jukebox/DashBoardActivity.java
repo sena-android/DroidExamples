@@ -24,7 +24,7 @@ public class DashBoardActivity extends Activity {
         setContentView(R.layout.dashboard);
         
         ActivitiesFlowUtil.addNavigationRule(R.id.action_player, this,PlayerActivity.class);
-        ActivitiesFlowUtil.addNavigationRule(R.id.action_statics, this,StaticsActivity.class);
+        ActivitiesFlowUtil.addNavigationRule(R.id.action_statics, this,StatisticsActivity.class);
 
         
         
