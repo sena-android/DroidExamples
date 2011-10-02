@@ -1,7 +1,7 @@
 package co.edu.sena.mobile.jukebox;
 
 
-import co.edu.sena.mobile.jukebox.util.ActivitiesFlowUtil;
+import co.edu.sena.mobile.util.ActivitiesFlowUtil;
 
 
 
@@ -9,8 +9,8 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Es la actividad principal de la aplicación. Nos permite visualizar
- * en el primer pantallazo las funcionalidades de la aplicación.
+ * Es la actividad principal de la aplicaciï¿½n. Nos permite visualizar
+ * en el primer pantallazo las funcionalidades de la aplicaciï¿½n.
  * 
  *  @author llanox
  * 

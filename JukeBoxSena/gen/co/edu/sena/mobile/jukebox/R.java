@@ -28,17 +28,20 @@ public final class R {
         public static final int btnForward=0x7f070017;
         public static final int btnPlayOrPause=0x7f070016;
         public static final int btnReward=0x7f070015;
+        public static final int checkBox1=0x7f070018;
+        public static final int checkBox2=0x7f07001a;
         public static final int dash=0x7f070000;
         public static final int east=0x7f070008;
         public static final int ibBoxes=0x7f07000d;
-        public static final int imageButton1=0x7f070019;
-        public static final int imageButton2=0x7f07001a;
-        public static final int imageButton3=0x7f07001b;
+        public static final int imageButton1=0x7f07001c;
+        public static final int imageButton2=0x7f07001d;
+        public static final int imageButton3=0x7f07001e;
         public static final int ivImageAlbum=0x7f070012;
         public static final int linearLayout1=0x7f07000f;
         public static final int relativeLayout1=0x7f070013;
-        public static final int scrollView1=0x7f070018;
+        public static final int scrollView1=0x7f07001b;
         public static final int textView1=0x7f070014;
+        public static final int textView2=0x7f070019;
         public static final int tvContadorLista=0x7f070010;
         public static final int tvSongName=0x7f070011;
         public static final int twBoxen=0x7f07000b;
@@ -50,7 +53,8 @@ public final class R {
     public static final class layout {
         public static final int dashboard=0x7f030000;
         public static final int player=0x7f030001;
-        public static final int statics=0x7f030002;
+        public static final int settings=0x7f030002;
+        public static final int statics=0x7f030003;
     }
     public static final class raw {
         public static final int moonlite=0x7f040000;
