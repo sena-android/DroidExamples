@@ -30,6 +30,7 @@
 		<ImageView android:src="@drawable/camara" android:layout_height="wrap_content" android:layout_width="wrap_content" android:onClick="capturarImagen" android:id="@+id/btn_portatil"></ImageView>
 		<ImageView android:src="@drawable/flecha" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/imageView3"></ImageView>
 		<ImageView android:src="@drawable/computador" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/imageView2"></ImageView>
+		<ImageView android:src="@android:drawable/ic_menu_report_image" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/ivPortatil"></ImageView>
 	</TableRow>
 	<TableRow android:layout_height="wrap_content" android:id="@+id/tableRow6" android:layout_width="match_parent" android:gravity="center_vertical">
 		<ImageView android:src="@drawable/camara" android:layout_height="wrap_content" android:layout_width="wrap_content" android:onClick="capturarImagen" android:id="@+id/btn_propietario"></ImageView>
