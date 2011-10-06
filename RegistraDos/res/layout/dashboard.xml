@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="@color/background1">
+    
+    
+    
+
+
+
+<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:padding="6dip">
+	
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1">
+		<Button 
+		android:id="@+id/btn_propietario" 
+		android:drawableTop="@drawable/persona" 
+		android:onClick="onActionTheOneClick" 
+		android:text="Registrar" 
+		style="@style/HomeButton" 
+		></Button>
+		
+	    <Button style="@style/HomeButton"
+	     
+	        android:text="Historico"
+	        android:drawableTop="@drawable/historico" android:id="@+id/btn_historico"/>
+	</LinearLayout>
+
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1">
+	    <Button style="@style/HomeButton"
+	 
+	        android:text="Verificar salida"
+	        android:drawableTop="@drawable/salida" android:id="@+id/btn_verificar_salida"/>
+	</LinearLayout>
+	
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:padding="6dip">
+	</LinearLayout>
+		
+</LinearLayout>
+
+<LinearLayout
+     android:id="@+id/now_playing_loading"
+     android:layout_width="fill_parent"
+     android:layout_height="@dimen/now_playing_height"
+     android:orientation="horizontal"
+     android:background="#eee"
+     android:gravity="center">
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="6dip"
+            android:indeterminate="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/now_playing_loading"/>
+</LinearLayout>
+
+    
+</LinearLayout>

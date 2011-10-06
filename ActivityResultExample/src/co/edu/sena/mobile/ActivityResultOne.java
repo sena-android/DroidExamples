@@ -25,8 +25,7 @@ public class ActivityResultOne extends Activity {
 		Intent i = new Intent(this, ActivityResultTwo.class);
 		i.putExtra("Dato1", "This value one for ActivityTwo ");
 		i.putExtra("Daro2", "This value two ActivityTwo");
-		// Set the request code to any code you like, you can identify the
-		// callback via this code
+		
 		startActivityForResult(i, REQUEST_CODE);
 	}
 
