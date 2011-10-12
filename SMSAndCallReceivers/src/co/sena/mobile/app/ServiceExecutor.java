@@ -4,6 +4,7 @@ package co.sena.mobile.app;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -29,6 +30,7 @@ public class ServiceExecutor extends Service {
 	public void onCreate() {
 		
 		Toast.makeText(this, "Servicio Creado", Toast.LENGTH_SHORT).show();
+
 		
 	}
 

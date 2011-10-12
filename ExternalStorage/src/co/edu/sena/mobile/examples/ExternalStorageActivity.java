@@ -1,6 +1,8 @@
 package co.edu.sena.mobile.examples;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ public class ExternalStorageActivity extends Activity {
 	private boolean mExternalStorageAvailable = false;
 	private boolean mExternalStorageWriteable = false;
 	private TextView tvOutPut;
+	private File musicDirectory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,14 @@ public class ExternalStorageActivity extends Activity {
     	 if(!mExternalStorageAvailable || !mExternalStorageWriteable )
     		 return;
     	 
-    	 
+    	 try {
+    		    FileWriter out = new FileWriter(new File(musicDirectory, "test.mp3"));
+    		    out.write("Writing test!");
+    		    out.close();
+    		}
+    		catch (IOException e) {
+    		    Log.e("Test", "What? " + e);
+    		}
     	  
     		
     	}	
@@ -75,35 +85,22 @@ public class ExternalStorageActivity extends Activity {
 		StringBuffer sb = new StringBuffer();
 		
 		
-		
+				
+
 		
 
-		File extDir1 = Environment.getExternalStorageDirectory();		
-		Log.d("Test", "  External storage dir from Environment: " + extDir1);
-		
-		sb.append("  External storage dir from Environment:  " + extDir1);
-		sb.append("\n");
-		
-		File extDir2 = Environment.getExternalStoragePublicDirectory("AnyStringExceptNull");
-		Log.d("Test", "  External storage public dir from Environment: " + extDir2);
-		sb.append("  External storage public dir from Environment:  " + extDir2);
-		sb.append("\n");
-		
-		
-		File extDir3 = getExternalFilesDir(null);
-		Log.d("Test", "External storage dir (root) from Context: " + extDir3);
-		sb.append("  External storage dir (root) from Context: " + extDir3);
-		sb.append("\n");
+		musicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
 
-		File extDir4 = getExternalFilesDir(Environment.DIRECTORY_MUSIC);
-		Log.d("Test", "  External storage dir (Music) from Context: " + extDir4);
-		sb.append("  External storage dir (Music) from Context: " + extDir4);
+		Log.d("Test", "  External storage dir (Music) from Context: " + musicDirectory);
+		sb.append("  External storage dir (Music) from Context: " + musicDirectory);
 		sb.append("\n");
 		
-		File extDir5 = getExternalFilesDir("MyOwnType");
-		Log.d("Test", "  External storage dir (MyOwnType) from Context: " + extDir5);
-		sb.append("  External storage dir (MyOwnType) from Context: " + extDir5);
-		sb.append("\n");
+		musicDirectory.mkdirs();
+		
+		
+			
+		
+		
 		
 		this.showMsg(sb.toString());
 		tvOutPut.setText(sb.toString());

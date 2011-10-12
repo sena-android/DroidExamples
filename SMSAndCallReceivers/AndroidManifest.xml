@@ -30,8 +30,12 @@
              <action android:name="android.intent.action.PHONE_STATE"></action>
             </intent-filter>
         </receiver>
+        
+        
    <!-- Como las Actividades o BroadCastReceivers los servicios deben ser también matriculados-->     
          <service android:name=".ServiceExecutor"/>
+         
+
 
   
 
