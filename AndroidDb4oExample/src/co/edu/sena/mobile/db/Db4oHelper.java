@@ -53,7 +53,7 @@ public class Db4oHelper {
 	private EmbeddedConfiguration dbConfig() throws IOException {
 		
 	EmbeddedConfiguration configuration = Db4oEmbedded.newConfiguration();
-	configuration.common().objectClass(Song.class).objectField("nombre").indexed(true);
+	configuration.common().objectClass(Song.class).objectField("name").indexed(true);
 	configuration.common().objectClass(Song.class).cascadeOnUpdate(true);
 	configuration.common().objectClass(Song.class).cascadeOnActivate(true);
 	

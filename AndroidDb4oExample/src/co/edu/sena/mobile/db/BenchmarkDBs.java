@@ -20,23 +20,27 @@ public class BenchmarkDBs extends Activity {
         setContentView(R.layout.main);
         
         Db4OProvider bm = new Db4OProvider(this);
-        Song chef =null;
+        Song song =null;
         Long startTime =null;
         Long endTime = null;
        
-//        startTime = System.currentTimeMillis();
-//        
-//        for(int i=0; i<TOTAL_RECORDS;i++){
-//        	
-//        chef = new Chef();
-//        chef.setNombre("Julio " +i);
-//        chef.setRestaurante("El buen comer "+i);
-//        bm.store(chef);
-//        }
-//        endTime = System.currentTimeMillis();
-//        
-//        Log.i(TAG, TOTAL_RECORDS+" registros insertados en "+ (endTime-startTime)/1000+" milesimas de segundo");
-//        
+        startTime = System.currentTimeMillis();
+        
+        for(int i=0; i<TOTAL_RECORDS;i++){
+        	
+        	song = new Song();
+        	song.setName("Sabor " +i);
+            song.setAuthor("Boby ");
+            song.setGenre("Indie");
+            song.setAlbum("Caido");
+            song.setTrack(1);
+            song.setYear(1980);
+        bm.store(song);
+        }
+        endTime = System.currentTimeMillis();
+        
+        Log.i(TAG, TOTAL_RECORDS+" registros insertados en "+ (endTime-startTime)/1000+" milesimas de segundo");
+        
         startTime = System.currentTimeMillis();
         List all = bm.findAll(Song.class);
         endTime = System.currentTimeMillis();

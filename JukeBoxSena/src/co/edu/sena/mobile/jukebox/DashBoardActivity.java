@@ -23,10 +23,10 @@ public class DashBoardActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
         
-        ActivitiesFlowUtil.addNavigationRule(R.id.action_player, this,PlayerActivity.class);
-        ActivitiesFlowUtil.addNavigationRule(R.id.action_statics, this,StatisticsActivity.class);
-
-        
+//        ActivitiesFlowUtil.addNavigationRule(R.id.action_player, this,PlayerActivity.class);
+//        ActivitiesFlowUtil.addNavigationRule(R.id.action_statics, this,StatisticsActivity.class);
+//
+//        
         
     }
 }
