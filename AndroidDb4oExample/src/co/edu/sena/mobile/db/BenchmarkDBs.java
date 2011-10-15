@@ -3,7 +3,7 @@ package co.edu.sena.mobile.db;
 import java.util.List;
 
 import co.edu.sena.mobiel.db.R;
-import co.edu.sena.mobile.db.model.Chef;
+import co.edu.sena.mobile.db.model.Song;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,8 +19,8 @@ public class BenchmarkDBs extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        BenchmarkProvider bm = new BenchmarkProvider(this);
-        Chef chef =null;
+        Db4OProvider bm = new Db4OProvider(this);
+        Song chef =null;
         Long startTime =null;
         Long endTime = null;
        
@@ -38,7 +38,7 @@ public class BenchmarkDBs extends Activity {
 //        Log.i(TAG, TOTAL_RECORDS+" registros insertados en "+ (endTime-startTime)/1000+" milesimas de segundo");
 //        
         startTime = System.currentTimeMillis();
-        List all = bm.findAll(Chef.class);
+        List all = bm.findAll(Song.class);
         endTime = System.currentTimeMillis();
         
         for(Object o : all){        	

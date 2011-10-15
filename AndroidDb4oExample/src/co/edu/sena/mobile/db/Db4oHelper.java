@@ -5,7 +5,7 @@ import java.io.IOException;
 import android.content.Context;
 import android.util.Log;
 
-import co.edu.sena.mobile.db.model.Chef;
+import co.edu.sena.mobile.db.model.Song;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
@@ -53,9 +53,9 @@ public class Db4oHelper {
 	private EmbeddedConfiguration dbConfig() throws IOException {
 		
 	EmbeddedConfiguration configuration = Db4oEmbedded.newConfiguration();
-	configuration.common().objectClass(Chef.class).objectField("nombre").indexed(true);
-	configuration.common().objectClass(Chef.class).cascadeOnUpdate(true);
-	configuration.common().objectClass(Chef.class).cascadeOnActivate(true);
+	configuration.common().objectClass(Song.class).objectField("nombre").indexed(true);
+	configuration.common().objectClass(Song.class).cascadeOnUpdate(true);
+	configuration.common().objectClass(Song.class).cascadeOnActivate(true);
 	
 	
 	

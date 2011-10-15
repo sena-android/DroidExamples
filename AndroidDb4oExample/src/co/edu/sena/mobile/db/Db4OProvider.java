@@ -4,9 +4,9 @@ import java.util.List;
 
 import android.content.Context;
 
-public class BenchmarkProvider extends Db4oHelper {
+public class Db4OProvider extends Db4oHelper {
 
-	public BenchmarkProvider(Context ctx) {
+	public Db4OProvider(Context ctx) {
 		super(ctx);
 	
 	}
