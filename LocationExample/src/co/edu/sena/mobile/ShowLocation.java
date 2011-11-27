@@ -45,6 +45,7 @@ public class ShowLocation extends Activity implements LocationListener {
 		// Define the criteria how to select the locatioin provider -> use
 		// default
 		Criteria criteria = new Criteria();		
+		criteria.setAccuracy(Criteria.ACCURACY_FINE);
 		provider = locationManager.getBestProvider(criteria, true);
 		
 		validateProvider();
@@ -89,6 +90,8 @@ public class ShowLocation extends Activity implements LocationListener {
 			}
 			
 		}
+		
+		Log.d("LocationExample", "Valid location for "+provider);
 	}
 
 	/* Remove the locationlistener updates when Activity is paused */
